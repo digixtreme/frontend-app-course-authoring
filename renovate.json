@@ -1,0 +1,19 @@
+{
+  "extends": [
+    "config:base",
+    "schedule:daily",
+    ":rebaseStalePrs",
+    ":semanticCommits"
+  ],
+  "patch": {
+    "automerge": true
+  },
+  "rebaseStalePrs": true,
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["@edx"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
+    }
+  ]
+}
