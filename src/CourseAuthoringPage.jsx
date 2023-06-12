@@ -58,7 +58,7 @@ export default function CourseAuthoringPage({ courseId, children }) {
       This functionality will be removed in TNL-9591 */}
       {inProgress ? !pathname.includes('/editor/') && <Loading /> : <AppHeader />}
       {children}
-      {!inProgress && <AppFooter />}
+      {/*!inProgress && <AppFooter />*/}
     </div>
   );
 }
